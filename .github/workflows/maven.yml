@@ -18,8 +18,8 @@ env:
   IMAGE_NAME: onlinebookstore
   ECR_REPOSITORY: gitactionrepo
   IMAGE_TAG: ${{ github.run_number }}
-  LOG_DIR: /home/github/actions-runner/_work/ci-logs
-  CI_LOG: /home/github/actions-runner/_work/ci-logs/${{ github.run_number }}.log
+  LOG_DIR: /home/github/actions-runner/_work/cicd-logs
+  CI_LOG: /home/github/actions-runner/_work/cicd-logs/${{ github.run_number }}.log
 
 jobs:
   cicd:
@@ -125,7 +125,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ci-logs
-          path: /home/github/actions-runner/_work/ci-logs
+          path: /home/github/actions-runner/_work/cicd-logs
 
       # ------------------------
       # JIRA
